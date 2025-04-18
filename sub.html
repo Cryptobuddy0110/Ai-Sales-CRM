@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        /* General Page Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0E1117;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Checkmark Animation */
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: fadeInScale 0.5s ease-in-out 0.5s forwards;
+            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8);
+        }
+
+        .checkmark::after {
+            content: '✔';
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Confetti Animation */
+        .confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            opacity: 1;
+            animation: fall linear infinite;
+        }
+
+        /* Generate More Confetti Pieces */
+        /* Using nth-child to randomize colors and animation duration */
+        .confetti:nth-child(1) { left: 5%; background-color: #FFC107; animation-duration: 3.5s; }
+        .confetti:nth-child(2) { left: 10%; background-color: #FF3D00; animation-duration: 2.7s; }
+        .confetti:nth-child(3) { left: 15%; background-color: #4CAF50; animation-duration: 3.8s; }
+        .confetti:nth-child(4) { left: 20%; background-color: #03A9F4; animation-duration: 3.3s; }
+        .confetti:nth-child(5) { left: 25%; background-color: #FFEB3B; animation-duration: 3s; }
+        .confetti:nth-child(6) { left: 30%; background-color: #E91E63; animation-duration: 3.6s; }
+        .confetti:nth-child(7) { left: 35%; background-color: #9C27B0; animation-duration: 2.9s; }
+        .confetti:nth-child(8) { left: 40%; background-color: #FF9800; animation-duration: 3.2s; }
+        .confetti:nth-child(9) { left: 45%; background-color: #8BC34A; animation-duration: 3.7s; }
+        .confetti:nth-child(10) { left: 50%; background-color: #3F51B5; animation-duration: 2.8s; }
+        .confetti:nth-child(11) { left: 55%; background-color: #FF4081; animation-duration: 3.4s; }
+        .confetti:nth-child(12) { left: 60%; background-color: #607D8B; animation-duration: 2.6s; }
+        .confetti:nth-child(13) { left: 65%; background-color: #00BCD4; animation-duration: 3.9s; }
+        .confetti:nth-child(14) { left: 70%; background-color: #CDDC39; animation-duration: 3.1s; }
+        .confetti:nth-child(15) { left: 75%; background-color: #009688; animation-duration: 2.5s; }
+        .confetti:nth-child(16) { left: 80%; background-color: #795548; animation-duration: 3.5s; }
+        .confetti:nth-child(17) { left: 85%; background-color: #FF5722; animation-duration: 2.7s; }
+        .confetti:nth-child(18) { left: 90%; background-color: #673AB7; animation-duration: 3.6s; }
+        .confetti:nth-child(19) { left: 92%; background-color: #FF1744; animation-duration: 2.8s; }
+        .confetti:nth-child(20) { left: 95%; background-color: #AEEA00; animation-duration: 3.3s; }
+        .confetti:nth-child(21) { left: 97%; background-color: #C2185B; animation-duration: 3.7s; }
+        .confetti:nth-child(22) { left: 99%; background-color: #388E3C; animation-duration: 2.9s; }
+        .confetti:nth-child(23) { left: 3%; background-color: #0288D1; animation-duration: 3s; }
+        .confetti:nth-child(24) { left: 8%; background-color: #D84315; animation-duration: 3.2s; }
+        .confetti:nth-child(25) { left: 13%; background-color: #1DE9B6; animation-duration: 3.4s; }
+        .confetti:nth-child(26) { left: 18%; background-color: #FFD600; animation-duration: 2.6s; }
+        .confetti:nth-child(27) { left: 22%; background-color: #512DA8; animation-duration: 3.8s; }
+        .confetti:nth-child(28) { left: 28%; background-color: #F57F17; animation-duration: 2.5s; }
+        .confetti:nth-child(29) { left: 32%; background-color: #004D40; animation-duration: 3.5s; }
+        .confetti:nth-child(30) { left: 38%; background-color: #B71C1C; animation-duration: 2.9s; }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="checkmark"></div>
+        <p class="message">Thank you for your Feedback!</p>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container">
+        <!-- 30 Confetti Pieces -->
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+    </div>
+
+</body>
+</html>
