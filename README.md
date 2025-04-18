@@ -1,16 +1,16 @@
-# 🔥 SalesVista – Your End-to-End AI-Powered Sales Management Assistant
+# 🔥 Sales – Your End-to-End AI-Powered Sales Management Assistant
 
-![SalesVista Banner](/static/assets/stats.png)
+![Sales Banner](/static/assets/stats.png)
 
-> 🚀 Finalist Project @ [Hackathon Name] – *“Congratulations! We reviewed your submission in the hackathon & looks like our panel loved it! You've been shortlisted as one of the finalists! 🎉”*
+> 🚀 Finalist Project of Hackathon  – *“Congratulations! We reviewed your submission in the hackathon & looks like our panel loved it! You've been shortlisted as one of the finalists! 🎉”*
 
 ---
 
 ## 📌 Overview
 
-**SalesVista** is your all-in-one, AI-powered sales management platform that transforms how you track, manage, and engage with your sales pipeline. From tracking every minute of your effort to visualizing customer geolocation and even *talking directly to your data* — SalesVista takes your sales game to the next level.
+**Sales** is your all-in-one, AI-powered sales management platform that transforms how you track, manage, and engage with your sales pipeline. From tracking every minute of your effort to visualizing customer geolocation and even *talking directly to your data* — Sales takes your sales game to the next level.
 
-Built to empower individuals, startups, and businesses with intelligent insights and interactive tools, **SalesVista** gives you full control of your sales lifecycle with real-time analytics, editable project logs, AI-driven Q&A, and much more.
+Built to empower individuals, startups, and businesses with intelligent insights and interactive tools, **Sales** gives you full control of your sales lifecycle with real-time analytics, editable project logs, AI-driven Q&A, and much more.
 
 ---
 
@@ -18,34 +18,44 @@ Built to empower individuals, startups, and businesses with intelligent insights
 
 - ⏳ **Track Time Spent on Each Project**  
   Know exactly how much time you’ve invested in any deal or client — down to the second.
-    ![THnakyou](/static/assets/montly.png) 
+  
+    ![THnakyou](/static/assets/montly.png)
+  
 - 📝 **Edit and Update Your Sales Data**  
   Keep your CRM dynamic. Easily update, modify, or delete project details anytime.
-    ![THnakyou](/static/assets/spicyt.png) 
+  
+    ![THnakyou](/static/assets/spicyt.png)
+  
 - 🧠 **Talk with Your Data (AI Q&A)**  
   Ask questions like:
   - *“How many projects have we completed this month?”*
   - *“Which region gave us the most leads last quarter?”*
   Your data talks back — thanks to powerful Retrieval-Augmented Generation (RAG) backed by LLMs.
-    ![THnakyou](/static/assets/ai%20response.png) 
+
+    ![THnakyou](/static/assets/ai%20response.png)
+    
 - 📈 **Insightful Graphs & Analytics**  
   Visualize your sales metrics: revenue, time spent, conversion rates, top clients, and more — all in sleek, interactive charts.
-    ![THnakyou](/static/assets/stts.png) 
+  
+    ![THnakyou](/static/assets/stts.png)
+  
 - 🌍 **Geolocation-Based Client Mapping**  
   See exactly *where* your customers are coming from with interactive maps and location clustering.
-    ![THnakyou](/static/assets/maps.png) 
+  
+    ![THnakyou](/static/assets/maps.png)
+  
 - 🗣️ **Feedback Form Analysis**  
   When users fill the feedback form, you gain rich insights about:
   - Client satisfaction
   - Feature requests
   - Customer journey analysis
   - 🔍 *And where exactly in your pipeline the client currently is!*
-    ![THnakyou](/static/assets/thankyou.png) 
+
+    ![THnakyou](/static/assets/thankyou.png)
+    
 ---
 
 ## 📸 Screenshots
-
-> *(Add actual screenshots here)*
 
 | Dashboard | AI Chat With Data | Client Maps |
 |----------|-------------------|-------------|
@@ -55,11 +65,11 @@ Built to empower individuals, startups, and businesses with intelligent insights
 
 ## ⚙️ Tech Stack
 
-- **Frontend:** Streamlit + TailwindCSS (custom styling)
+- **Frontend:** Streamlit 
 - **Backend:** Python
 - **AI Engine:** Custom RAG pipeline + LLM
 - **Database:** SQLite 
-- **Maps & Analytics:** Plotly, Leaflet, GeoJSON
+- **Maps & Analytics:** Mapbox
 
 ---
 
